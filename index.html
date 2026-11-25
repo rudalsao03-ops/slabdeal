@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#0B1B34" />
+<title>슬랩딜 · 포켓몬 카드 최고 매입가 비교</title>
+<meta name="description" content="포켓몬 카드 사진 한 장으로 여러 카드샵의 매입가를 비교하는 모바일 웹앱 프로토타입" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="device">
+
+  <header class="appbar">
+    <a class="brand" href="#" data-action="brand" aria-label="슬랩딜 홈">
+      <svg class="brand-mark" width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+        <rect x="3" y="2" width="16" height="21" rx="3.4" transform="rotate(-9 3 2)" fill="#2A5BFF" opacity=".28"/>
+        <rect x="8" y="3" width="16" height="21" rx="3.4" fill="url(#bmg)"/>
+        <path d="M16 9.2l1.7 3.5 3.8.55-2.75 2.7.65 3.8L16 18l-3.4 1.75.65-3.8-2.75-2.7 3.8-.55z" fill="#fff" opacity=".92"/>
+        <defs>
+          <linearGradient id="bmg" x1="8" y1="3" x2="24" y2="24" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#2A5BFF"/><stop offset="1" stop-color="#0B1B34"/>
+          </linearGradient>
+        </defs>
+      </svg>
+      <span class="brand-text"><strong>슬랩딜</strong><em>SLABDEAL</em></span>
+    </a>
+
+    <div class="modeswitch" role="tablist" aria-label="모드 전환">
+      <span class="modeswitch-thumb" id="modeThumb" aria-hidden="true"></span>
+      <button type="button" role="tab" id="modeSeller" aria-selected="true" data-action="mode" data-mode="seller">판매자</button>
+      <button type="button" role="tab" id="modeDealer" aria-selected="false" data-action="mode" data-mode="dealer">카드샵</button>
+    </div>
+  </header>
+
+  <main class="screen" id="screen" tabindex="-1"></main>
+
+  <nav class="tabbar" id="tabbar" data-count="4" aria-label="주요 메뉴"></nav>
+</div>
+
+<div class="sheet-root" id="sheetRoot" hidden></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
